@@ -18,9 +18,13 @@ function showSuccess(input){
 }
 
 //function isValid
-function isValidEmail(email) {
+function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if(re.test(input.value.trim())) {
+        showSuccess(input);
+    }else{
+        showError(input, `Email 형식이 옳지 않습니다.`);
+    }
 }
 // Check required fields
 function checkRequrired(inputArr){
@@ -32,6 +36,23 @@ function checkRequrired(inputArr){
         }
     });
 }
+// Check input length
+function checkLength(input, min, max){
+    if(input.value.length < min){
+        showError(input, `${getFieldName(input)} 최소 ${min} 글자 입니다.`);
+    } else if(input.value.lenght > max) {
+        showError(input, `${getFieldName(input)} 최대 ${max} 글자 입니다.`);
+    } else{
+        showSuccess(input);
+    }
+}
+
+// Check Password Match
+function checkPasswordsMatch(input1, input2){
+    if(input1.value !== input2.value){
+        showError(input2, `Password 가 일치하지 않습니다.`);
+    }
+}
 // Get fieldName
 function getFieldName(input){
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
@@ -40,4 +61,8 @@ function getFieldName(input){
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     checkRequrired([username, email, password, password2]);
+    checkLength(username, 3, 15);
+    checkLength(password, 6, 25);
+    checkEmail(email);
+    checkPasswordsMatch(password, password2);
 })
