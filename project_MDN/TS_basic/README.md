@@ -14,4 +14,6 @@
 - 2.Class system
 
 # Create Block-Chain With Typescript
+- 1.Setting Class that name is Block
+- 2.Setting Static method that name is calculateBlockHash
 
