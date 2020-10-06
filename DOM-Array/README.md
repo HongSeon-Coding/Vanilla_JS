@@ -1,9 +1,27 @@
 # 1. DOM-Array
     1. This Project is Leaning DOM-Array-Methods
-    2. Using forEach, map ...
+    2. Using forEach, map, filter, reduce
+
+# 2. Product
 
 
-# 2. Function
+[Add User]
+
+<img src="iamges/dom_1.png" alt="dom_1" width="500"/>
+
+[Double Money]
+
+<img src="iamges/dom_2.png" alt="dom_2" width="500"/>
+
+[Sort By Millonaires]
+
+<img src="iamges/dom_3.png" alt="dom_3" width="500"/>
+
+[Calculate Wealth]
+
+<img src="iamges/dom_4.png" alt="dom_4" width="500"/>
+
+# 3. Function
 
 ## 1. Get Random Money and User-Name
 
@@ -64,3 +82,15 @@ function doubleMoney(){
 >   
     1. data 배열에 있는 값을 가져와 다시 재할당 후 updateDOM() 함수를 실행한다.
     2. 이때 user.money 값을 2배로 변경하여 전달한다.
+
+## 4. Sort By Richest
+
+```Javascript
+// Sort By Richest
+function sortByRichest() {
+    data.sort((a,b) => b.money - a.money);
+    updateDOM();
+}
+```
+>
+    1. data 배열에 있는 값을 가져와 다시 재할당 후 updateDOM() 함수를 실행한다.
