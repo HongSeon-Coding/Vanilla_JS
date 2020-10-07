@@ -10,3 +10,4 @@
 - [x] 3.[CustomVideoPlayer]()
 - [x] 4.[Form-Validator]()
 - [x] 5.[DOM-Array]()
+- [x] 6.[Modal-Menu]()
