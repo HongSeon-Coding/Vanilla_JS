@@ -3,7 +3,7 @@
     1. Learning Javascript
     2. Makeing VanillaJS Projects
 
-# 2. Projects is Ready!!
+# 2. Now Have 7 Projects is Ready!!
 
 - [x] 1.[Exshange-Rate]()
 - [x] 2.[Movie-Seat]()
@@ -11,3 +11,4 @@
 - [x] 4.[Form-Validator]()
 - [x] 5.[DOM-Array]()
 - [x] 6.[Modal-Menu]()
+- [x] 7.[Modal-Menu]()
